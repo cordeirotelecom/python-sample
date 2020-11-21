@@ -1,4 +1,7 @@
-# Projeto de uma calculadora em Phyton
+''' Projeto de uma calculadora em Phyton '''
+
+# -*- coding: utf-8 -*-
+
 import math
 
 def calculadora():
@@ -13,8 +16,13 @@ OPERADORES:
 / divisão
 ''')
     
+    try:
     numero_1 = float(input('Entre com o primeiro número: '))
     numero_2 = float(input('Entre com o segundo número: '))
+    
+    except ValueError:
+    print("Digite somente números, sem letras")
+    calculadora()
 
     if operacao == '+':
         print('{} + {} = '.format(numero_1, numero_2))
