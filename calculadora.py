@@ -1,4 +1,5 @@
 # Projeto de uma calculadora em Phyton
+import math
 
 def calculadora():
     operador = input('''
@@ -30,7 +31,10 @@ OPERADORES:
     elif operacao == '/':
         print('{} / {} = '.format(numero_1, numero_2))
         print(numero_1 / number_2)
-
+    
+    elif operacao == 'raiz {}':
+        raiz = math.sqrt(num)
+        print(f'\nA raiz quadrada de {num} é {raiz}\n')
     else:
         print('Você não entrou com uma operação válida, por favor rode o programa novamente.')
 
